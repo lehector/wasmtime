@@ -15,7 +15,7 @@ pub struct PDFG {
 
 impl PartialEq for PDFG {
     fn eq(&self, other: &Self) -> bool {
-        return self.op == other.op && self.ty == other.ty && self.cmp == other.cmp && &self.args == &other.args    
+        return self.op == other.op && self.ty == other.ty && self.cmp == other.cmp && *self.args == *other.args    
     }
 }
 
@@ -79,17 +79,17 @@ impl Display for PDFG {
 }
 
 fn opcode_allowed(opcode: Opcode) -> bool {
-    matches!(opcode, Opcode::Icmp | Opcode::IcmpImm | Opcode::Smin 
+    matches!(opcode, Opcode::Icmp | Opcode::Smin 
         | Opcode::Umin | Opcode::Smax | Opcode::Umax | Opcode::Iconst
-        | Opcode::Bitselect | Opcode::Iadd | Opcode::IaddImm 
-        | Opcode::Isub | Opcode::IrsubImm | Opcode::Ineg | Opcode::Iabs
-        | Opcode::ImulImm | Opcode::Imul | Opcode::Udiv | Opcode::UdivImm
-        | Opcode::Sdiv | Opcode::SdivImm | Opcode::Urem | Opcode::UremImm
-        | Opcode::Srem | Opcode::SremImm | Opcode::Band | Opcode::BandImm
-        | Opcode::Bor | Opcode::BorImm | Opcode::Bxor | Opcode::BxorImm
-        | Opcode::Bnot | Opcode::BandNot | Opcode::Rotl | Opcode::RotlImm
-        | Opcode::Rotr | Opcode::RotrImm | Opcode::Ishl | Opcode::IshlImm
-        | Opcode::Ushr | Opcode::UshrImm | Opcode::Sshr | Opcode::SshrImm
+        | Opcode::Bitselect | Opcode::Iadd 
+        | Opcode::Isub | Opcode::Ineg | Opcode::Iabs
+        | Opcode::ImulImm | Opcode::Imul | Opcode::Udiv
+        | Opcode::Sdiv | Opcode::Urem
+        | Opcode::Srem | Opcode::Band
+        | Opcode::Bor  | Opcode::Bxor 
+        | Opcode::Bnot | Opcode::BandNot | Opcode::Rotl 
+        | Opcode::Rotr | Opcode::Ishl 
+        | Opcode::Ushr | Opcode::Sshr 
         | Opcode::Clz | Opcode::Cls | Opcode::Ctz | Opcode::Popcnt
         | Opcode::Uextend | Opcode::Sextend) 
 }
