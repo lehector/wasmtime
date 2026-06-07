@@ -44,6 +44,7 @@ mod debug;
 mod func_environ;
 mod translate;
 mod trap;
+mod pattern_extractor;
 
 use self::compiler::Compiler;
 

@@ -44,6 +44,7 @@ use wasmtime_environ::{
     WasmValType, prelude::*,
 };
 use wasmtime_unwinder::ExceptionTableBuilder;
+use crate::pattern_extractor::extract_patterns_of_function;
 
 #[cfg(feature = "component-model")]
 pub(crate) mod component;
@@ -345,6 +346,14 @@ impl wasmtime_environ::Compiler for Compiler {
         let timing = cranelift_codegen::timing::take_current();
         log::debug!("`{symbol}` translated to CLIF in {:?}", timing.total());
         log::trace!("`{symbol}` timing info\n{timing}");
+
+        let layout = &compiler.cx.codegen_context.func.layout;
+        let dfg = &compiler.cx.codegen_context.func.dfg;
+
+        let pdfgs = extract_patterns_of_function(layout, dfg);
+        for pdfg in pdfgs.iter() {
+            println!("{}", pdfg);
+        }
 
         Ok(CompiledFunctionBody {
             code: box_dyn_any_compiler_context(Some(compiler.cx)),
