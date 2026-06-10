@@ -80,10 +80,10 @@ impl Display for PDFG {
 
 fn opcode_allowed(opcode: Opcode) -> bool {
     matches!(opcode, Opcode::Icmp | Opcode::Smin 
-        | Opcode::Umin | Opcode::Smax | Opcode::Umax | Opcode::Iconst
+        | Opcode::Umin | Opcode::Smax | Opcode::Umax 
         | Opcode::Bitselect | Opcode::Iadd 
         | Opcode::Isub | Opcode::Ineg | Opcode::Iabs
-        | Opcode::ImulImm | Opcode::Imul | Opcode::Udiv
+        | Opcode::Imul | Opcode::Udiv
         | Opcode::Sdiv | Opcode::Urem
         | Opcode::Srem | Opcode::Band
         | Opcode::Bor  | Opcode::Bxor 
