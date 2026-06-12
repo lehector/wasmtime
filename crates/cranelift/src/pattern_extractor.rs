@@ -1,10 +1,13 @@
-use std::fmt::{Formatter, Error, Display, Debug};
+use std::hash::{Hash, Hasher};
+use std::collections::HashMap;
+use std::fmt::Formatter;
+use std::fmt::{Error, Display, Debug};
 use cranelift_codegen::ir::{Layout, Opcode, DataFlowGraph, Block, Inst, ValueDef, Type, condcodes::IntCC, InstructionData};
 
 // Pattern DataFlowGraph
 // just a very simple tree data structure that associates opcodes with a list of arguments, which
 // themselves are Some pdfg nodes, or None if the argument should be an arbitrary BitVector
-#[derive(Clone)]
+#[derive(Clone, Eq)]
 pub struct PDFG {
     inst: Inst,
     op: Opcode,
@@ -16,6 +19,15 @@ pub struct PDFG {
 impl PartialEq for PDFG {
     fn eq(&self, other: &Self) -> bool {
         return self.op == other.op && self.ty == other.ty && self.cmp == other.cmp && *self.args == *other.args    
+    }
+}
+
+impl Hash for PDFG {
+    fn hash<H: Hasher>(&self, state: &mut H) {
+        self.op.hash(state);
+        self.ty.hash(state);
+        self.cmp.hash(state);
+        self.args.hash(state);
     }
 }
 
@@ -172,18 +184,13 @@ fn extract_patterns_of_block(block: Block, layout: &Layout, dfg: &DataFlowGraph)
     pdfg_buf
 }
 
-pub fn extract_patterns_of_function(layout: &Layout, dfg: &DataFlowGraph) -> Vec<PDFG> {
-   let mut pdfg_buf = Vec::new();
-
+pub fn extract_patterns_of_function(layout: &Layout, dfg: &DataFlowGraph, pattern_map: &mut HashMap<PDFG, u32>) {
    // Start by going through all blocks
    for block in layout.blocks() {
        for new_pdfg in extract_patterns_of_block(block, layout, dfg) {
-           if !pdfg_buf.iter().any(|x| *x == new_pdfg) {
-                pdfg_buf.push(new_pdfg)
-           }
+           let count = pattern_map.get(&new_pdfg).map_or(1, |n| n + 1);
+           pattern_map.insert(new_pdfg, count);
        }
    }
-    
-   pdfg_buf
 }
 

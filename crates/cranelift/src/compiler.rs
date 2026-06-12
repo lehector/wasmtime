@@ -44,7 +44,7 @@ use wasmtime_environ::{
     WasmValType, prelude::*,
 };
 use wasmtime_unwinder::ExceptionTableBuilder;
-use crate::pattern_extractor::extract_patterns_of_function;
+use crate::pattern_extractor::{PDFG, extract_patterns_of_function};
 
 #[cfg(feature = "component-model")]
 pub(crate) mod component;
@@ -59,6 +59,7 @@ struct IncrementalCacheContext {
 struct CompilerContext {
     func_translator: FuncTranslator,
     codegen_context: Context,
+    pattern_map: HashMap<PDFG, u32>,
     incremental_cache_ctx: Option<IncrementalCacheContext>,
     validator_allocations: FuncValidatorAllocations,
     debug_slot_descriptor: Option<FrameStateSlotBuilder>,
@@ -70,6 +71,7 @@ impl Default for CompilerContext {
         Self {
             func_translator: FuncTranslator::new(),
             codegen_context: Context::new(),
+            pattern_map: HashMap::new(),
             incremental_cache_ctx: None,
             validator_allocations: Default::default(),
             debug_slot_descriptor: None,
@@ -199,6 +201,18 @@ impl Compiler {
         }
 
         builder.ins().call_indirect(sig, addr, args)
+    }
+
+    pub fn print_patterns(&self) {
+        let compiler = self.function_compiler();
+
+        for (pdfg, count) in {
+            let mut pairs: Vec<(&PDFG, &u32)> = compiler.cx.pattern_map.iter().collect();
+            pairs.sort_by(|a, b| a.1.cmp(b.1));
+            pairs
+        } {
+            println!("{}, {}", pdfg, count);
+        }
     }
 }
 
@@ -350,11 +364,8 @@ impl wasmtime_environ::Compiler for Compiler {
         let layout = &compiler.cx.codegen_context.func.layout;
         let dfg = &compiler.cx.codegen_context.func.dfg;
 
-        let pdfgs = extract_patterns_of_function(layout, dfg);
-        for pdfg in pdfgs.iter() {
-            println!("{}", pdfg);
-        }
-
+        extract_patterns_of_function(layout, dfg, &mut compiler.cx.pattern_map);
+        
         Ok(CompiledFunctionBody {
             code: box_dyn_any_compiler_context(Some(compiler.cx)),
             needs_gc_heap,
