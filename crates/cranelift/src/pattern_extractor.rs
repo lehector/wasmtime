@@ -1,3 +1,4 @@
+use std::sync::{Mutex, LazyLock};
 use std::hash::{Hash, Hasher};
 use std::collections::HashMap;
 use std::fmt::Formatter;
@@ -15,6 +16,8 @@ pub struct PDFG {
     cmp: Option<IntCC>,
     args: Box<Vec<Result<PDFG, Type>>>
 }
+
+pub static PATTERN_MAP: LazyLock<Mutex<HashMap<PDFG, u32>>> = LazyLock::new(|| Mutex::new(HashMap::new()));
 
 impl PartialEq for PDFG {
     fn eq(&self, other: &Self) -> bool {
@@ -184,13 +187,24 @@ fn extract_patterns_of_block(block: Block, layout: &Layout, dfg: &DataFlowGraph)
     pdfg_buf
 }
 
-pub fn extract_patterns_of_function(layout: &Layout, dfg: &DataFlowGraph, pattern_map: &mut HashMap<PDFG, u32>) {
+pub fn extract_patterns_of_function(layout: &Layout, dfg: &DataFlowGraph) {
    // Start by going through all blocks
    for block in layout.blocks() {
        for new_pdfg in extract_patterns_of_block(block, layout, dfg) {
-           let count = pattern_map.get(&new_pdfg).map_or(1, |n| n + 1);
-           pattern_map.insert(new_pdfg, count);
+           let count = PATTERN_MAP.lock().unwrap().get(&new_pdfg).map_or(1, |n| n + 1);
+           PATTERN_MAP.lock().unwrap().insert(new_pdfg, count);
        }
    }
 }
 
+pub fn print_patterns() {
+    let map = PATTERN_MAP.lock().unwrap();
+
+    for (pdfg, count) in {
+        let mut pairs: Vec<(&PDFG, &u32)> = map.iter().collect();
+        pairs.sort_by(|a, b| b.1.cmp(a.1));
+        pairs
+    } {
+        println!("{}, {}", pdfg, count);
+    }
+}

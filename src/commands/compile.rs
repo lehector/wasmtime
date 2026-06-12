@@ -5,6 +5,7 @@ use std::fs;
 use std::path::PathBuf;
 use wasmtime::{CodeBuilder, CodeHint, Engine, Result, bail, error::Context as _};
 use wasmtime_cli_flags::CommonOptions;
+use wasmtime_cranelift::pattern_extractor::print_patterns;
 
 const AFTER_HELP: &str =
     "By default, no CPU features or presets will be enabled for the compilation.\n\
@@ -98,6 +99,8 @@ impl CompileCommand {
         };
         fs::write(&output, output_bytes)
             .with_context(|| format!("failed to write output: {}", output.display()))?;
+
+        print_patterns();
 
         Ok(())
     }
