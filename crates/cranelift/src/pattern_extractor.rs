@@ -205,6 +205,6 @@ pub fn print_patterns() {
         pairs.sort_by(|a, b| b.1.cmp(a.1));
         pairs
     } {
-        println!("{}, {}", pdfg, count);
+        println!("{}; {}", pdfg, count);
     }
 }
