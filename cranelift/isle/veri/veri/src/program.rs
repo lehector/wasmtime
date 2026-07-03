@@ -12,6 +12,7 @@ use cranelift_isle::trie_again::{Overlap, RuleSet};
 use cranelift_isle::{lexer, parser};
 use std::collections::{HashMap, HashSet};
 use std::sync::Arc;
+use crate::pattern2sygus;
 
 pub struct Program {
     pub files: Arc<Files>,
@@ -64,6 +65,13 @@ impl Program {
         let specenv = spec::SpecEnv::from_ast(&defs, &termenv, &tyenv)?;
 
         let overlaps = Self::build_overlaps(&defs, files.clone())?;
+
+        for def in defs.iter() {
+            match def {
+                Def::Rule(rule) => { pattern2sygus::pattern2sygus(rule.pattern.clone()); }
+                _ => {}
+            }
+        }
 
         Ok(Self {
             files,

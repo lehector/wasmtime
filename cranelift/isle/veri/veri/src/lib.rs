@@ -29,6 +29,7 @@ pub mod trie;
 pub mod type_inference;
 pub mod types;
 pub mod veri;
+pub mod pattern2sygus;
 
 #[cfg(test)]
 pub mod testing;
