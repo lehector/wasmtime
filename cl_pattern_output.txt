@@ -1,509 +1,1161 @@
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
-"lower" 1
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	var_y
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	imm12_from_value
+		var_y
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	imm12_from_value
+		var_x
+	var_y
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	var_y
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	var_y
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	extended_value_from_value
+		var_y
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	extended_value_from_value
+		var_x
+	var_y
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	ishl
+		wildcard
+		var_y
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	ishl
+		wildcard
+		var_x
+	var_y
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	imul
+		wildcard
+		var_y
+		var_z
+
+iadd
+	ty_int_ref_scalar_64_extract
+		var_ty
+	imul
+		wildcard
+		var_x
+		var_y
+	var_z
+
+isub
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	imul
+		wildcard
+		var_y
+		var_z
+
+iadd
+	ty = 
+		multi_lane
+			wildcard
+			wildcard
+	var_x
+	var_y
+
+iadd
+	pI128
+	var_x
+	var_y
+
+i = 
+
+i = 
+
+and 
+	use_dotprod
+	has_type
+		pI32X4
+		iadd
+			wildcard
+			var_c
+
+iabs
+	ty = 
+		multi_lane
+			wildcard
+			wildcard
+	var_x
+
+iabs
+	pI64
+	var_x
+
+iabs
+	fits_in_32
+		var_ty
+	var_x
+
+iabs
+	pI128
+	var_x
+
+isub
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	var_y
+
+isub
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	imm12_from_value
+		var_y
+
+isub
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	var_y
+
+isub
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	extended_value_from_value
+		var_y
+
+isub
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	ishl
+		wildcard
+		var_y
+
+isub
+	ty = 
+		multi_lane
+			wildcard
+			wildcard
+	var_x
+	var_y
+
+isub
+	pI128
+	var_x
+	var_y
+
+ineg
+	fits_in_64
+		var_ty
+	var_x
+
+ineg
+	pI128
+	var_x
+
+ineg
+	ty_vec128
+		var_ty
+	var_x
+
+imul
+	ty_int_ref_scalar_64_extract
+		var_ty
+	var_x
+	var_y
+
+imul
+	pI128
+	var_x
+	var_y
+
+imul
+	pI128
+	uextend
+		wildcard
+		var_x
+	uextend
+		wildcard
+		var_y
+
+imul
+	pI128
+	sextend
+		wildcard
+		var_x
+	sextend
+		wildcard
+		var_y
+
+imul
+	lane_fits_in_32
+		ty = 
+			multi_lane
+				wildcard
+				wildcard
+	var_x
+	var_y
+
+imul
+	pI64X2
+	var_x
+	var_y
+
+imul
+	pI16X8
+
+imul
+	pI16X8
+
+imul
+	pI16X8
+
+imul
+	pI16X8
+
+imul
+	pI32X4
+
+imul
+	pI32X4
+
+imul
+	pI32X4
+
+imul
+	pI32X4
+
+imul
+	pI64X2
+
+imul
+	pI64X2
+
+imul
+	pI64X2
+
+imul
+	pI64X2
+
+udiv
+	pI64
+	var_x
+	var_y
+
+udiv
+	fits_in_32
+		var_ty
+	var_x
+	var_y
+
+sdiv
+	pI64
+	var_x
+	var_y
+
+sdiv
+	fits_in_32
+		var_ty
+	var_x
+	var_y
+
+sdiv
+	pI64
+	var_x
+
+sdiv
+	fits_in_32
+		var_ty
+	var_x
+
+urem
+	pI64
+	var_x
+	var_y
+
+urem
+	fits_in_32
+		var_ty
+	var_x
+	var_y
+
+srem
+	pI64
+	var_x
+	var_y
+
+srem
+	fits_in_32
+		var_ty
+	var_x
+	var_y
+
+umin
+	and 
+		fits_in_64
+			var_ty
+		ty_int
+			wildcard
+	var_x
+	var_y
+
+smin
+	and 
+		fits_in_64
+			var_ty
+		ty_int
+			wildcard
+	var_x
+	var_y
+
+umax
+	and 
+		fits_in_64
+			var_ty
+		ty_int
+			wildcard
+	var_x
+	var_y
+
+smax
+	and 
+		fits_in_64
+			var_ty
+		ty_int
+			wildcard
+	var_x
+	var_y
+
+smin
+	ty = 
+		not_i64x2
+	var_x
+	var_y
+
+smin
+	pI64X2
+	var_x
+	var_y
+
+umin
+	ty = 
+		not_i64x2
+	var_x
+	var_y
+
+umin
+	pI64X2
+	var_x
+	var_y
+
+smax
+	ty = 
+		not_i64x2
+	var_x
+	var_y
+
+smax
+	pI64X2
+	var_x
+	var_y
+
+umax
+	ty = 
+		not_i64x2
+	var_x
+	var_y
+
+umax
+	pI64X2
+	var_x
+	var_y
+
+uextend
+	fits_in_64
+		var_out
+	x = 
+		value_type
+			var_in
+
+uextend
+	fits_in_64
+		var_out
+
+uextend
+	fits_in_64
+		var_out
+	x = 
+		and 
+			value_type
+				var_in
+
+uextend
+	pI128
+	var_x
+
+uextend
+	pI128
+
+uextend
+	fits_in_64
+		wildcard
+	x = 
+
+sextend
+	fits_in_64
+		var_out
+	x = 
+		value_type
+			var_in
+
+sextend
+	fits_in_64
+		var_out
+
+sextend
+	pI128
+	var_x
+
+sextend
+	pI128
+
+sextend
+	pI128
+
+sextend
+	fits_in_64
+		wildcard
+	x = 
+
+bnot
+	fits_in_64
+		ty_int
+			var_ty
+	var_x
+
+bnot
+	fits_in_64
+		ty_scalar_float
+			var_ty
+	var_x
+
+bnot
+	ty_vec64
+		var_ty
+	var_x
+
+bnot
+	ty_vec128
+		var_ty
+	var_x
+
+bnot
+	pI128
+	var_x
+
+bnot
+	fits_in_64
+		ty_int
+			var_ty
+	ishl
+		wildcard
+		var_x
+
+bnot
+	fits_in_64
+		ty_int
+			var_ty
+	bxor
+		wildcard
+		var_x
+		var_y
+
+bnot
+	pI128
+	bxor
+		wildcard
+		var_x
+		var_y
+
+band
+	fits_in_64
+		ty_int
+			var_ty
+	var_x
+	var_y
+
+band
+	fits_in_64
+		ty_scalar_float
+			var_ty
+	var_x
+	var_y
+
+band
+	ty_vec64
+		var_ty
+	var_x
+	var_y
+
+band
+	ty_vec128
+		var_ty
+	var_x
+	var_y
+
+band
+	pI128
+	var_x
+	var_y
+
+band
+	fits_in_64
+		ty_int
+			var_ty
+	var_x
+	bnot
+		wildcard
+		var_y
+
+band
+	fits_in_64
+		ty_int
+			var_ty
+	bnot
+		wildcard
+		var_y
+	var_x
+
+band
+	pI128
+	var_x
+	bnot
+		wildcard
+		var_y
+
+band
+	pI128
+	bnot
+		wildcard
+		var_y
+	var_x
+
+band
+	ty_vec64
+		var_ty
+	var_x
+	bnot
+		wildcard
+		var_y
+
+band
+	ty_vec64
+		var_ty
+	bnot
+		wildcard
+		var_y
+	var_x
+
+band
+	ty_vec128
+		var_ty
+	var_x
+	bnot
+		wildcard
+		var_y
+
+band
+	ty_vec128
+		var_ty
+	bnot
+		wildcard
+		var_y
+	var_x
+
+bor
+	fits_in_64
+		ty_int
+			var_ty
+	var_x
+	var_y
+
+bor
+	fits_in_64
+		ty_scalar_float
+			var_ty
+	var_x
+	var_y
+
+bor
+	ty_vec64
+		var_ty
+	var_x
+	var_y
+
+bor
+	ty_vec128
+		var_ty
+	var_x
+	var_y
+
+bor
+	pI128
+	var_x
+	var_y
+
+bor
+	fits_in_64
+		ty_int
+			var_ty
+	var_x
+	bnot
+		wildcard
+		var_y
+
+bor
+	fits_in_64
+		ty_int
+			var_ty
+	bnot
+		wildcard
+		var_y
+	var_x
+
+bor
+	pI128
+	var_x
+	bnot
+		wildcard
+		var_y
+
+bor
+	pI128
+	bnot
+		wildcard
+		var_y
+	var_x
+
+bor
+	ty_vec64
+		var_ty
+	var_x
+	bnot
+		wildcard
+		var_y
+
+bor
+	ty_vec64
+		var_ty
+	bnot
+		wildcard
+		var_y
+	var_x
+
+bor
+	ty_vec128
+		var_ty
+	var_x
+	bnot
+		wildcard
+		var_y
+
+bor
+	ty_vec128
+		var_ty
+	bnot
+		wildcard
+		var_y
+	var_x
+
+bor
+	ty_32_or_64
+		var_ty
+	ishl
+		wildcard
+		var_x
+		u8_from_iconst
+			var_xs
+	ushr
+		wildcard
+		var_y
+		u8_from_iconst
+			var_ys
+
+bor
+	ty_32_or_64
+		var_ty
+	ushr
+		wildcard
+		var_y
+		u8_from_iconst
+			var_ys
+	ishl
+		wildcard
+		var_x
+		u8_from_iconst
+			var_xs
+
+bxor
+	fits_in_64
+		ty_int
+			var_ty
+	var_x
+	var_y
+
+bxor
+	fits_in_64
+		ty_scalar_float
+			var_ty
+	var_x
+	var_y
+
+bxor
+	ty_vec64
+		var_ty
+	var_x
+	var_y
+
+bxor
+	ty_vec128
+		var_ty
+	var_x
+	var_y
+
+bxor
+	pI128
+	var_x
+	var_y
+
+bxor
+	fits_in_64
+		ty_int
+			var_ty
+	var_x
+	bnot
+		wildcard
+		var_y
+
+bxor
+	fits_in_64
+		ty_int
+			var_ty
+	bnot
+		wildcard
+		var_y
+	var_x
+
+bxor
+	pI128
+	var_x
+	bnot
+		wildcard
+		var_y
+
+bxor
+	pI128
+	bnot
+		wildcard
+		var_y
+	var_x
+
+ishl
+	fits_in_32
+		var_ty
+	var_x
+	var_y
+
+ishl
+	pI64
+	var_x
+	var_y
+
+ishl
+	pI128
+	var_x
+	var_y
+
+ishl
+	ty_vec128
+		var_ty
+	var_x
+	var_y
+
+ishl
+	ty_vec128
+		var_ty
+	var_x
+
+ushr
+	fits_in_32
+		var_ty
+	var_x
+	var_y
+
+ushr
+	pI64
+	var_x
+	var_y
+
+ushr
+	pI128
+	var_x
+	var_y
+
+ushr
+	ty_vec128
+		var_ty
+	var_x
+	var_y
+
+ushr
+	ty_vec128
+		var_ty
+	var_x
+
+ushr
+	ty_vec128
+		var_ty
+	var_x
+
+sshr
+	fits_in_32
+		var_ty
+	var_x
+	var_y
+
+sshr
+	pI64
+	var_x
+	var_y
+
+sshr
+	pI128
+	var_x
+	var_y
+
+sshr
+	ty_vec128
+		var_ty
+	var_x
+	var_y
+
+sshr
+	ty_vec128
+		var_ty
+	var_x
+
+sshr
+	ty_vec128
+		var_ty
+	var_x
+
+rotl
+	fits_in_16
+		var_ty
+	var_x
+	var_y
+
+rotl
+	fits_in_16
+		var_ty
+	var_x
+
+rotl
+	pI32
+	var_x
+	var_y
+
+rotl
+	pI64
+	var_x
+	var_y
+
+rotl
+	pI32
+	var_x
+
+rotl
+	pI64
+	var_x
+
+rotl
+	pI128
+	var_x
+	var_y
+
+rotr
+	fits_in_16
+		var_ty
+	var_x
+	var_y
+
+rotr
+	pI32
+	var_x
+	var_y
+
+rotr
+	pI64
+	var_x
+	var_y
+
+rotr
+	fits_in_16
+		var_ty
+	var_x
+
+rotr
+	pI32
+	var_x
+
+rotr
+	pI64
+	var_x
+
+rotr
+	pI128
+	var_x
+	var_y
+
+clz
+	pI8
+	var_x
+
+clz
+	pI16
+	var_x
+
+clz
+	pI128
+	var_x
+
+clz
+	var_ty
+	var_x
+
+ctz
+	pI8
+	var_x
+
+ctz
+	pI16
+	var_x
+
+ctz
+	pI128
+	var_x
+
+ctz
+	var_ty
+	var_x
+
+cls
+	pI8
+	var_x
+
+cls
+	pI16
+	var_x
+
+cls
+	pI128
+	var_x
+
+cls
+	var_ty
+	var_x
+
+popcnt
+	pI8
+	var_x
+
+popcnt
+	pI16
+	var_x
+
+popcnt
+	pI32
+	var_x
+
+popcnt
+	pI64
+	var_x
+
+popcnt
+	pI128
+	var_x
+
+popcnt
+	pI8X16
+	var_x
+
+bitselect
+	var_ty
+	var_c
+	var_x
+	var_y
+
+bitselect
+	ty_vec128
+		var_ty
+	var_c
+	var_x
+	var_y
+
+icmp
+	ty = 
+		multi_lane
+			wildcard
+			wildcard
+	icmp_zero_cond_not_eq
+		var_cond
+	var_x
+	var_y
+
+icmp
+	ty = 
+		multi_lane
+			wildcard
+			wildcard
+	icmp_zero_cond
+		var_cond
+	var_x
+	var_y
+
+icmp
+	ty = 
+		multi_lane
+			wildcard
+			wildcard
+	icmp_zero_cond_not_eq
+		var_cond
+	var_x
+	var_y
+
+icmp
+	ty = 
+		multi_lane
+			wildcard
+			wildcard
+	icmp_zero_cond
+		var_cond
+	var_x
+	var_y
+
+icmp
+	multi_lane
+		wildcard
+		wildcard
+	var_cond
+	var_x
+	y = 
+		value_type
+			var_in_ty
+
+icmp
+	wildcard
+	var_cond
+	x = 
+		value_type
+			ty_int
+				var_ty
+	var_y
+
+and 
+	use_lse
+
+and 
+	use_lse
+
+and 
+	use_lse
+
+and 
+	use_lse
+
+and 
+	use_lse
+
+and 
+	use_lse
+
+and 
+	use_lse
+
+and 
+	use_lse
+
+and 
+	use_lse
+
+and 
+	use_lse
+
+and 
+
+iadd
+	ty = 
+		dynamic_lane
+			wildcard
+			wildcard
+	var_x
+	var_y
+
+isub
+	ty = 
+		dynamic_lane
+			wildcard
+			wildcard
+	var_x
+	var_y
+
+imul
+	lane_fits_in_32
+		ty = 
+			dynamic_lane
+				wildcard
+				wildcard
+	var_x
+	var_y
+
 ========================== Verification configuration =========================
-Number of threads:  8
-Working directory:  /tmp/.tmpb7CAeA
+Number of threads:  16
+Working directory:  /tmp/.tmpMfS379
 Log directory:      .veriisle
 Results to log dir: yes (results.out under .veriisle)
 Excluding ISLE terms with any of the following tags (the default exclude set): vector, atomics, spectre, narrowfloat, amode_const, i128, wasm_category_stack, slow.

@@ -881,6 +881,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
+ "cranelift-codegen",
  "cranelift-codegen-meta",
  "cranelift-isle",
  "cranelift-isle-veri-test-macros",

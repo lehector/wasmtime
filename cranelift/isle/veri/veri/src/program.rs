@@ -66,12 +66,7 @@ impl Program {
 
         let overlaps = Self::build_overlaps(&defs, files.clone())?;
 
-        for def in defs.iter() {
-            match def {
-                Def::Rule(rule) => { pattern2sygus::pattern2sygus(rule.pattern.clone()); }
-                _ => {}
-            }
-        }
+        pattern2sygus::pattern2sygus(defs, &tyenv, &termenv);
 
         Ok(Self {
             files,
