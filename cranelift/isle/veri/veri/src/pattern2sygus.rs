@@ -1,6 +1,6 @@
 // ty_int_ref_scalar_64_extract -> value is a 64 bit scalar type
 // fits_in_... -> value has certain bitwidth but may be a vector, though this is irrelevant to us
-
+// icmp_zero_cond : Equal, SGE, SGT, SLE, SLT
 
 use std::str::FromStr;
 
@@ -11,8 +11,20 @@ use cranelift_isle::ast::{Def, Pattern, Ident};
 use cranelift_isle::sema::{TypeEnv, TermEnv};
 use cranelift_codegen::ir::{Opcode};
 
+#[derive(Debug, Clone)]
+enum InsnType {
+    BV8,
+    BV16,
+    BV32,
+    BV64,
+}
+
+fn all_types() -> Vec<InsnType> {
+    return vec!(InsnType::BV8, InsnType::BV16, InsnType::BV32, InsnType::BV64)
+}
+
 enum PatternPart {
-    Insn(Opcode),
+    Insn(Opcode, Option<Vec<InsnType>>),
     Var(String),
     Wildcard,
     Other(Ident),
@@ -49,7 +61,7 @@ impl Display for PatternPart {
         match self {
             PatternPart::Var(id) => write!(f, "var_{}", id),
             PatternPart::Wildcard => write!(f, "wildcard"),
-            PatternPart::Insn(i) => write!(f, "{}", i),
+            PatternPart::Insn(i, ty) => write!(f, "{} {:?}", i, ty),
             PatternPart::Other(id) => write!(f, "{}", id.0),
             PatternPart::And => write!(f, "and "),
             PatternPart::BindPattern(id) => write!(f, "{} = ", id),
@@ -82,15 +94,34 @@ impl Display for Pattern2Sygus {
     }
 }
 
+fn parse_type(t: &Pattern) -> Option<Vec<InsnType>> {
+    match t {
+        Pattern::Term{sym: id, args: args, pos: _} => {
+            match id.0.as_str() {
+                    "ty_int_ref_scalar_64_extract" => Some(vec!(InsnType::BV64)),
+                    "fits_in_8" => Some(vec!(InsnType::BV8)),
+                    "fits_in_16" => Some(vec!(InsnType::BV8, InsnType::BV16)),
+                    "fits_in_32" => Some(vec!(InsnType::BV8, InsnType::BV16, InsnType::BV32)),
+                    "fits_in_64" => Some(vec!(InsnType::BV8, InsnType::BV16, InsnType::BV32, InsnType::BV64)),
+                    _ => { log::error!("Unrecognized string type: {}", id.0); None }
+            }
+        }
+        Pattern::Wildcard{pos: _} => Some(all_types()),
+        _ => { log::error!("Unrecognized type: {:?}", t); None }
+    }
+}
+
 fn handle_term(t: &Pattern) -> Option<Pattern2Sygus> {
     match t {
        Pattern::Term{sym: id, args: args, pos: _} => {
            match Opcode::from_str(id.0.as_str()) {
                 Ok(opcode) => { 
                    if !opcode_allowed(opcode) { /*print!(" unsopportaed {} :(", opcode);*/ return None; }
-                   let mut pattern_out = Pattern2Sygus{ pattern: PatternPart::Insn(opcode), args: Vec::new() };
+                   let ty = parse_type(&args[0]);
 
-                   for arg in args.iter() {
+                   let mut pattern_out = Pattern2Sygus{ pattern: PatternPart::Insn(opcode, ty), args: Vec::new() };
+
+                   for arg in args.iter().skip(1) {
                        if let Some(arg) = handle_term(arg) {
                            pattern_out.args.push(Box::new(arg));
                        }

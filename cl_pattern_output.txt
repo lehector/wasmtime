@@ -1,102 +1,68 @@
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
+iadd Some([BV64])
 	var_x
 	var_y
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
+iadd Some([BV64])
 	var_x
 	imm12_from_value
 		var_y
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
+iadd Some([BV64])
 	imm12_from_value
 		var_x
 	var_y
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
+iadd Some([BV64])
 	var_x
 	var_y
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
+iadd Some([BV64])
 	var_x
 	var_y
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
+iadd Some([BV64])
 	var_x
 	extended_value_from_value
 		var_y
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
+iadd Some([BV64])
 	extended_value_from_value
 		var_x
 	var_y
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
+iadd Some([BV64])
 	var_x
-	ishl
-		wildcard
+	ishl Some([BV8, BV16, BV32, BV64])
 		var_y
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
-	ishl
-		wildcard
+iadd Some([BV64])
+	ishl Some([BV8, BV16, BV32, BV64])
 		var_x
 	var_y
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
+iadd Some([BV64])
 	var_x
-	imul
-		wildcard
+	imul Some([BV8, BV16, BV32, BV64])
 		var_y
 		var_z
 
-iadd
-	ty_int_ref_scalar_64_extract
-		var_ty
-	imul
-		wildcard
+iadd Some([BV64])
+	imul Some([BV8, BV16, BV32, BV64])
 		var_x
 		var_y
 	var_z
 
-isub
-	ty_int_ref_scalar_64_extract
-		var_ty
+isub Some([BV64])
 	var_x
-	imul
-		wildcard
+	imul Some([BV8, BV16, BV32, BV64])
 		var_y
 		var_z
 
-iadd
-	ty = 
-		multi_lane
-			wildcard
-			wildcard
+iadd None
 	var_x
 	var_y
 
-iadd
-	pI128
+iadd None
 	var_x
 	var_y
 
@@ -108,987 +74,655 @@ and
 	use_dotprod
 	has_type
 		pI32X4
-		iadd
-			wildcard
+		iadd Some([BV8, BV16, BV32, BV64])
 			var_c
 
-iabs
-	ty = 
-		multi_lane
-			wildcard
-			wildcard
+iabs None
 	var_x
 
-iabs
-	pI64
+iabs None
 	var_x
 
-iabs
-	fits_in_32
-		var_ty
+iabs Some([BV8, BV16, BV32])
 	var_x
 
-iabs
-	pI128
+iabs None
 	var_x
 
-isub
-	ty_int_ref_scalar_64_extract
-		var_ty
+isub Some([BV64])
 	var_x
 	var_y
 
-isub
-	ty_int_ref_scalar_64_extract
-		var_ty
+isub Some([BV64])
 	var_x
 	imm12_from_value
 		var_y
 
-isub
-	ty_int_ref_scalar_64_extract
-		var_ty
+isub Some([BV64])
 	var_x
 	var_y
 
-isub
-	ty_int_ref_scalar_64_extract
-		var_ty
+isub Some([BV64])
 	var_x
 	extended_value_from_value
 		var_y
 
-isub
-	ty_int_ref_scalar_64_extract
-		var_ty
+isub Some([BV64])
 	var_x
-	ishl
-		wildcard
+	ishl Some([BV8, BV16, BV32, BV64])
 		var_y
 
-isub
-	ty = 
-		multi_lane
-			wildcard
-			wildcard
+isub None
 	var_x
 	var_y
 
-isub
-	pI128
+isub None
 	var_x
 	var_y
 
-ineg
-	fits_in_64
-		var_ty
+ineg Some([BV8, BV16, BV32, BV64])
 	var_x
 
-ineg
-	pI128
+ineg None
 	var_x
 
-ineg
-	ty_vec128
-		var_ty
+ineg None
 	var_x
 
-imul
-	ty_int_ref_scalar_64_extract
-		var_ty
+imul Some([BV64])
 	var_x
 	var_y
 
-imul
-	pI128
+imul None
 	var_x
 	var_y
 
-imul
-	pI128
-	uextend
-		wildcard
+imul None
+	uextend Some([BV8, BV16, BV32, BV64])
 		var_x
-	uextend
-		wildcard
+	uextend Some([BV8, BV16, BV32, BV64])
 		var_y
 
-imul
-	pI128
-	sextend
-		wildcard
+imul None
+	sextend Some([BV8, BV16, BV32, BV64])
 		var_x
-	sextend
-		wildcard
+	sextend Some([BV8, BV16, BV32, BV64])
 		var_y
 
-imul
-	lane_fits_in_32
-		ty = 
-			multi_lane
-				wildcard
-				wildcard
+imul None
 	var_x
 	var_y
 
-imul
-	pI64X2
+imul None
 	var_x
 	var_y
 
-imul
-	pI16X8
+imul None
 
-imul
-	pI16X8
+imul None
 
-imul
-	pI16X8
+imul None
 
-imul
-	pI16X8
+imul None
 
-imul
-	pI32X4
+imul None
 
-imul
-	pI32X4
+imul None
 
-imul
-	pI32X4
+imul None
 
-imul
-	pI32X4
+imul None
 
-imul
-	pI64X2
+imul None
 
-imul
-	pI64X2
+imul None
 
-imul
-	pI64X2
+imul None
 
-imul
-	pI64X2
+imul None
 
-udiv
-	pI64
+udiv None
 	var_x
 	var_y
 
-udiv
-	fits_in_32
-		var_ty
+udiv Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-sdiv
-	pI64
+sdiv None
 	var_x
 	var_y
 
-sdiv
-	fits_in_32
-		var_ty
+sdiv Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-sdiv
-	pI64
+sdiv None
 	var_x
 
-sdiv
-	fits_in_32
-		var_ty
+sdiv Some([BV8, BV16, BV32])
 	var_x
 
-urem
-	pI64
+urem None
 	var_x
 	var_y
 
-urem
-	fits_in_32
-		var_ty
+urem Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-srem
-	pI64
+srem None
 	var_x
 	var_y
 
-srem
-	fits_in_32
-		var_ty
+srem Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-umin
-	and 
-		fits_in_64
-			var_ty
-		ty_int
-			wildcard
+umin None
 	var_x
 	var_y
 
-smin
-	and 
-		fits_in_64
-			var_ty
-		ty_int
-			wildcard
+smin None
 	var_x
 	var_y
 
-umax
-	and 
-		fits_in_64
-			var_ty
-		ty_int
-			wildcard
+umax None
 	var_x
 	var_y
 
-smax
-	and 
-		fits_in_64
-			var_ty
-		ty_int
-			wildcard
+smax None
 	var_x
 	var_y
 
-smin
-	ty = 
-		not_i64x2
+smin None
 	var_x
 	var_y
 
-smin
-	pI64X2
+smin None
 	var_x
 	var_y
 
-umin
-	ty = 
-		not_i64x2
+umin None
 	var_x
 	var_y
 
-umin
-	pI64X2
+umin None
 	var_x
 	var_y
 
-smax
-	ty = 
-		not_i64x2
+smax None
 	var_x
 	var_y
 
-smax
-	pI64X2
+smax None
 	var_x
 	var_y
 
-umax
-	ty = 
-		not_i64x2
+umax None
 	var_x
 	var_y
 
-umax
-	pI64X2
+umax None
 	var_x
 	var_y
 
-uextend
-	fits_in_64
-		var_out
+uextend Some([BV8, BV16, BV32, BV64])
 	x = 
 		value_type
 			var_in
 
-uextend
-	fits_in_64
-		var_out
+uextend Some([BV8, BV16, BV32, BV64])
 
-uextend
-	fits_in_64
-		var_out
+uextend Some([BV8, BV16, BV32, BV64])
 	x = 
 		and 
 			value_type
 				var_in
 
-uextend
-	pI128
+uextend None
 	var_x
 
-uextend
-	pI128
+uextend None
 
-uextend
-	fits_in_64
-		wildcard
+uextend Some([BV8, BV16, BV32, BV64])
 	x = 
 
-sextend
-	fits_in_64
-		var_out
+sextend Some([BV8, BV16, BV32, BV64])
 	x = 
 		value_type
 			var_in
 
-sextend
-	fits_in_64
-		var_out
+sextend Some([BV8, BV16, BV32, BV64])
 
-sextend
-	pI128
+sextend None
 	var_x
 
-sextend
-	pI128
+sextend None
 
-sextend
-	pI128
+sextend None
 
-sextend
-	fits_in_64
-		wildcard
+sextend Some([BV8, BV16, BV32, BV64])
 	x = 
 
-bnot
-	fits_in_64
-		ty_int
-			var_ty
+bnot Some([BV8, BV16, BV32, BV64])
 	var_x
 
-bnot
-	fits_in_64
-		ty_scalar_float
-			var_ty
+bnot Some([BV8, BV16, BV32, BV64])
 	var_x
 
-bnot
-	ty_vec64
-		var_ty
+bnot None
 	var_x
 
-bnot
-	ty_vec128
-		var_ty
+bnot None
 	var_x
 
-bnot
-	pI128
+bnot None
 	var_x
 
-bnot
-	fits_in_64
-		ty_int
-			var_ty
-	ishl
-		wildcard
+bnot Some([BV8, BV16, BV32, BV64])
+	ishl Some([BV8, BV16, BV32, BV64])
 		var_x
 
-bnot
-	fits_in_64
-		ty_int
-			var_ty
-	bxor
-		wildcard
+bnot Some([BV8, BV16, BV32, BV64])
+	bxor Some([BV8, BV16, BV32, BV64])
 		var_x
 		var_y
 
-bnot
-	pI128
-	bxor
-		wildcard
+bnot None
+	bxor Some([BV8, BV16, BV32, BV64])
 		var_x
 		var_y
 
-band
-	fits_in_64
-		ty_int
-			var_ty
+band Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
-band
-	fits_in_64
-		ty_scalar_float
-			var_ty
+band Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
-band
-	ty_vec64
-		var_ty
+band None
 	var_x
 	var_y
 
-band
-	ty_vec128
-		var_ty
+band None
 	var_x
 	var_y
 
-band
-	pI128
+band None
 	var_x
 	var_y
 
-band
-	fits_in_64
-		ty_int
-			var_ty
+band Some([BV8, BV16, BV32, BV64])
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-band
-	fits_in_64
-		ty_int
-			var_ty
-	bnot
-		wildcard
+band Some([BV8, BV16, BV32, BV64])
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-band
-	pI128
+band None
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-band
-	pI128
-	bnot
-		wildcard
+band None
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-band
-	ty_vec64
-		var_ty
+band None
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-band
-	ty_vec64
-		var_ty
-	bnot
-		wildcard
+band None
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-band
-	ty_vec128
-		var_ty
+band None
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-band
-	ty_vec128
-		var_ty
-	bnot
-		wildcard
+band None
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-bor
-	fits_in_64
-		ty_int
-			var_ty
+bor Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
-bor
-	fits_in_64
-		ty_scalar_float
-			var_ty
+bor Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
-bor
-	ty_vec64
-		var_ty
+bor None
 	var_x
 	var_y
 
-bor
-	ty_vec128
-		var_ty
+bor None
 	var_x
 	var_y
 
-bor
-	pI128
+bor None
 	var_x
 	var_y
 
-bor
-	fits_in_64
-		ty_int
-			var_ty
+bor Some([BV8, BV16, BV32, BV64])
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-bor
-	fits_in_64
-		ty_int
-			var_ty
-	bnot
-		wildcard
+bor Some([BV8, BV16, BV32, BV64])
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-bor
-	pI128
+bor None
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-bor
-	pI128
-	bnot
-		wildcard
+bor None
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-bor
-	ty_vec64
-		var_ty
+bor None
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-bor
-	ty_vec64
-		var_ty
-	bnot
-		wildcard
+bor None
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-bor
-	ty_vec128
-		var_ty
+bor None
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-bor
-	ty_vec128
-		var_ty
-	bnot
-		wildcard
+bor None
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-bor
-	ty_32_or_64
-		var_ty
-	ishl
-		wildcard
+bor None
+	ishl Some([BV8, BV16, BV32, BV64])
 		var_x
 		u8_from_iconst
 			var_xs
-	ushr
-		wildcard
+	ushr Some([BV8, BV16, BV32, BV64])
 		var_y
 		u8_from_iconst
 			var_ys
 
-bor
-	ty_32_or_64
-		var_ty
-	ushr
-		wildcard
+bor None
+	ushr Some([BV8, BV16, BV32, BV64])
 		var_y
 		u8_from_iconst
 			var_ys
-	ishl
-		wildcard
+	ishl Some([BV8, BV16, BV32, BV64])
 		var_x
 		u8_from_iconst
 			var_xs
 
-bxor
-	fits_in_64
-		ty_int
-			var_ty
+bxor Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
-bxor
-	fits_in_64
-		ty_scalar_float
-			var_ty
+bxor Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
-bxor
-	ty_vec64
-		var_ty
+bxor None
 	var_x
 	var_y
 
-bxor
-	ty_vec128
-		var_ty
+bxor None
 	var_x
 	var_y
 
-bxor
-	pI128
+bxor None
 	var_x
 	var_y
 
-bxor
-	fits_in_64
-		ty_int
-			var_ty
+bxor Some([BV8, BV16, BV32, BV64])
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-bxor
-	fits_in_64
-		ty_int
-			var_ty
-	bnot
-		wildcard
+bxor Some([BV8, BV16, BV32, BV64])
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-bxor
-	pI128
+bxor None
 	var_x
-	bnot
-		wildcard
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 
-bxor
-	pI128
-	bnot
-		wildcard
+bxor None
+	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-ishl
-	fits_in_32
-		var_ty
+ishl Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-ishl
-	pI64
+ishl None
 	var_x
 	var_y
 
-ishl
-	pI128
+ishl None
 	var_x
 	var_y
 
-ishl
-	ty_vec128
-		var_ty
+ishl None
 	var_x
 	var_y
 
-ishl
-	ty_vec128
-		var_ty
+ishl None
 	var_x
 
-ushr
-	fits_in_32
-		var_ty
+ushr Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-ushr
-	pI64
+ushr None
 	var_x
 	var_y
 
-ushr
-	pI128
+ushr None
 	var_x
 	var_y
 
-ushr
-	ty_vec128
-		var_ty
+ushr None
 	var_x
 	var_y
 
-ushr
-	ty_vec128
-		var_ty
+ushr None
 	var_x
 
-ushr
-	ty_vec128
-		var_ty
+ushr None
 	var_x
 
-sshr
-	fits_in_32
-		var_ty
+sshr Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-sshr
-	pI64
+sshr None
 	var_x
 	var_y
 
-sshr
-	pI128
+sshr None
 	var_x
 	var_y
 
-sshr
-	ty_vec128
-		var_ty
+sshr None
 	var_x
 	var_y
 
-sshr
-	ty_vec128
-		var_ty
+sshr None
 	var_x
 
-sshr
-	ty_vec128
-		var_ty
+sshr None
 	var_x
 
-rotl
-	fits_in_16
-		var_ty
+rotl Some([BV8, BV16])
 	var_x
 	var_y
 
-rotl
-	fits_in_16
-		var_ty
+rotl Some([BV8, BV16])
 	var_x
 
-rotl
-	pI32
+rotl None
 	var_x
 	var_y
 
-rotl
-	pI64
+rotl None
 	var_x
 	var_y
 
-rotl
-	pI32
+rotl None
 	var_x
 
-rotl
-	pI64
+rotl None
 	var_x
 
-rotl
-	pI128
+rotl None
 	var_x
 	var_y
 
-rotr
-	fits_in_16
-		var_ty
+rotr Some([BV8, BV16])
 	var_x
 	var_y
 
-rotr
-	pI32
+rotr None
 	var_x
 	var_y
 
-rotr
-	pI64
+rotr None
 	var_x
 	var_y
 
-rotr
-	fits_in_16
-		var_ty
+rotr Some([BV8, BV16])
 	var_x
 
-rotr
-	pI32
+rotr None
 	var_x
 
-rotr
-	pI64
+rotr None
 	var_x
 
-rotr
-	pI128
+rotr None
 	var_x
 	var_y
 
-clz
-	pI8
+clz None
 	var_x
 
-clz
-	pI16
+clz None
 	var_x
 
-clz
-	pI128
+clz None
 	var_x
 
-clz
-	var_ty
+clz None
 	var_x
 
-ctz
-	pI8
+ctz None
 	var_x
 
-ctz
-	pI16
+ctz None
 	var_x
 
-ctz
-	pI128
+ctz None
 	var_x
 
-ctz
-	var_ty
+ctz None
 	var_x
 
-cls
-	pI8
+cls None
 	var_x
 
-cls
-	pI16
+cls None
 	var_x
 
-cls
-	pI128
+cls None
 	var_x
 
-cls
-	var_ty
+cls None
 	var_x
 
-popcnt
-	pI8
+popcnt None
 	var_x
 
-popcnt
-	pI16
+popcnt None
 	var_x
 
-popcnt
-	pI32
+popcnt None
 	var_x
 
-popcnt
-	pI64
+popcnt None
 	var_x
 
-popcnt
-	pI128
+popcnt None
 	var_x
 
-popcnt
-	pI8X16
+popcnt None
 	var_x
 
-bitselect
-	var_ty
+bitselect None
 	var_c
 	var_x
 	var_y
 
-bitselect
-	ty_vec128
-		var_ty
+bitselect None
 	var_c
 	var_x
 	var_y
 
-icmp
-	ty = 
-		multi_lane
-			wildcard
-			wildcard
+icmp None
 	icmp_zero_cond_not_eq
 		var_cond
 	var_x
 	var_y
 
-icmp
-	ty = 
-		multi_lane
-			wildcard
-			wildcard
+icmp None
 	icmp_zero_cond
 		var_cond
 	var_x
 	var_y
 
-icmp
-	ty = 
-		multi_lane
-			wildcard
-			wildcard
+icmp None
 	icmp_zero_cond_not_eq
 		var_cond
 	var_x
 	var_y
 
-icmp
-	ty = 
-		multi_lane
-			wildcard
-			wildcard
+icmp None
 	icmp_zero_cond
 		var_cond
 	var_x
 	var_y
 
-icmp
-	multi_lane
-		wildcard
-		wildcard
+icmp None
 	var_cond
 	var_x
 	y = 
 		value_type
 			var_in_ty
 
-icmp
-	wildcard
+icmp Some([BV8, BV16, BV32, BV64])
 	var_cond
 	x = 
 		value_type
@@ -1128,34 +762,21 @@ and
 
 and 
 
-iadd
-	ty = 
-		dynamic_lane
-			wildcard
-			wildcard
+iadd None
 	var_x
 	var_y
 
-isub
-	ty = 
-		dynamic_lane
-			wildcard
-			wildcard
+isub None
 	var_x
 	var_y
 
-imul
-	lane_fits_in_32
-		ty = 
-			dynamic_lane
-				wildcard
-				wildcard
+imul None
 	var_x
 	var_y
 
 ========================== Verification configuration =========================
-Number of threads:  16
-Working directory:  /tmp/.tmpMfS379
+Number of threads:  8
+Working directory:  /tmp/.tmp3fEJA0
 Log directory:      .veriisle
 Results to log dir: yes (results.out under .veriisle)
 Excluding ISLE terms with any of the following tags (the default exclude set): vector, atomics, spectre, narrowfloat, amode_const, i128, wasm_category_stack, slow.
