@@ -58,35 +58,14 @@ isub Some([BV64])
 		var_y
 		var_z
 
-iadd None
-	var_x
-	var_y
-
-iadd None
-	var_x
-	var_y
-
 i = 
 
 i = 
 
-and 
-	use_dotprod
-	has_type
-		pI32X4
-		iadd Some([BV8, BV16, BV32, BV64])
-			var_c
-
-iabs None
-	var_x
-
-iabs None
+iabs Some([BV64])
 	var_x
 
 iabs Some([BV8, BV16, BV32])
-	var_x
-
-iabs None
 	var_x
 
 isub Some([BV64])
@@ -112,76 +91,14 @@ isub Some([BV64])
 	ishl Some([BV8, BV16, BV32, BV64])
 		var_y
 
-isub None
-	var_x
-	var_y
-
-isub None
-	var_x
-	var_y
-
 ineg Some([BV8, BV16, BV32, BV64])
-	var_x
-
-ineg None
-	var_x
-
-ineg None
 	var_x
 
 imul Some([BV64])
 	var_x
 	var_y
 
-imul None
-	var_x
-	var_y
-
-imul None
-	uextend Some([BV8, BV16, BV32, BV64])
-		var_x
-	uextend Some([BV8, BV16, BV32, BV64])
-		var_y
-
-imul None
-	sextend Some([BV8, BV16, BV32, BV64])
-		var_x
-	sextend Some([BV8, BV16, BV32, BV64])
-		var_y
-
-imul None
-	var_x
-	var_y
-
-imul None
-	var_x
-	var_y
-
-imul None
-
-imul None
-
-imul None
-
-imul None
-
-imul None
-
-imul None
-
-imul None
-
-imul None
-
-imul None
-
-imul None
-
-imul None
-
-imul None
-
-udiv None
+udiv Some([BV64])
 	var_x
 	var_y
 
@@ -189,7 +106,7 @@ udiv Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-sdiv None
+sdiv Some([BV64])
 	var_x
 	var_y
 
@@ -197,13 +114,13 @@ sdiv Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-sdiv None
+sdiv Some([BV64])
 	var_x
 
 sdiv Some([BV8, BV16, BV32])
 	var_x
 
-urem None
+urem Some([BV64])
 	var_x
 	var_y
 
@@ -211,7 +128,7 @@ urem Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-srem None
+srem Some([BV64])
 	var_x
 	var_y
 
@@ -219,51 +136,19 @@ srem Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-umin None
+umin Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
-smin None
+smin Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
-umax None
+umax Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
-smax None
-	var_x
-	var_y
-
-smin None
-	var_x
-	var_y
-
-smin None
-	var_x
-	var_y
-
-umin None
-	var_x
-	var_y
-
-umin None
-	var_x
-	var_y
-
-smax None
-	var_x
-	var_y
-
-smax None
-	var_x
-	var_y
-
-umax None
-	var_x
-	var_y
-
-umax None
+smax Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
@@ -280,11 +165,6 @@ uextend Some([BV8, BV16, BV32, BV64])
 			value_type
 				var_in
 
-uextend None
-	var_x
-
-uextend None
-
 uextend Some([BV8, BV16, BV32, BV64])
 	x = 
 
@@ -295,13 +175,6 @@ sextend Some([BV8, BV16, BV32, BV64])
 
 sextend Some([BV8, BV16, BV32, BV64])
 
-sextend None
-	var_x
-
-sextend None
-
-sextend None
-
 sextend Some([BV8, BV16, BV32, BV64])
 	x = 
 
@@ -311,15 +184,6 @@ bnot Some([BV8, BV16, BV32, BV64])
 bnot Some([BV8, BV16, BV32, BV64])
 	var_x
 
-bnot None
-	var_x
-
-bnot None
-	var_x
-
-bnot None
-	var_x
-
 bnot Some([BV8, BV16, BV32, BV64])
 	ishl Some([BV8, BV16, BV32, BV64])
 		var_x
@@ -329,28 +193,11 @@ bnot Some([BV8, BV16, BV32, BV64])
 		var_x
 		var_y
 
-bnot None
-	bxor Some([BV8, BV16, BV32, BV64])
-		var_x
-		var_y
-
 band Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
 band Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-band None
-	var_x
-	var_y
-
-band None
-	var_x
-	var_y
-
-band None
 	var_x
 	var_y
 
@@ -364,53 +211,11 @@ band Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-band None
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-band None
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
-band None
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-band None
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
-band None
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-band None
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
 bor Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
 bor Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-bor None
-	var_x
-	var_y
-
-bor None
-	var_x
-	var_y
-
-bor None
 	var_x
 	var_y
 
@@ -424,73 +229,11 @@ bor Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
 
-bor None
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-bor None
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
-bor None
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-bor None
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
-bor None
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-bor None
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
-bor None
-	ishl Some([BV8, BV16, BV32, BV64])
-		var_x
-		u8_from_iconst
-			var_xs
-	ushr Some([BV8, BV16, BV32, BV64])
-		var_y
-		u8_from_iconst
-			var_ys
-
-bor None
-	ushr Some([BV8, BV16, BV32, BV64])
-		var_y
-		u8_from_iconst
-			var_ys
-	ishl Some([BV8, BV16, BV32, BV64])
-		var_x
-		u8_from_iconst
-			var_xs
-
 bxor Some([BV8, BV16, BV32, BV64])
 	var_x
 	var_y
 
 bxor Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-bxor None
-	var_x
-	var_y
-
-bxor None
-	var_x
-	var_y
-
-bxor None
 	var_x
 	var_y
 
@@ -500,16 +243,6 @@ bxor Some([BV8, BV16, BV32, BV64])
 		var_y
 
 bxor Some([BV8, BV16, BV32, BV64])
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
-bxor None
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-bxor None
 	bnot Some([BV8, BV16, BV32, BV64])
 		var_y
 	var_x
@@ -518,64 +251,25 @@ ishl Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-ishl None
+ishl Some([BV64])
 	var_x
 	var_y
-
-ishl None
-	var_x
-	var_y
-
-ishl None
-	var_x
-	var_y
-
-ishl None
-	var_x
 
 ushr Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-ushr None
+ushr Some([BV64])
 	var_x
 	var_y
-
-ushr None
-	var_x
-	var_y
-
-ushr None
-	var_x
-	var_y
-
-ushr None
-	var_x
-
-ushr None
-	var_x
 
 sshr Some([BV8, BV16, BV32])
 	var_x
 	var_y
 
-sshr None
+sshr Some([BV64])
 	var_x
 	var_y
-
-sshr None
-	var_x
-	var_y
-
-sshr None
-	var_x
-	var_y
-
-sshr None
-	var_x
-
-sshr None
-	var_x
 
 rotl Some([BV8, BV16])
 	var_x
@@ -584,143 +278,70 @@ rotl Some([BV8, BV16])
 rotl Some([BV8, BV16])
 	var_x
 
-rotl None
+rotl Some([BV32])
 	var_x
 	var_y
 
-rotl None
+rotl Some([BV64])
 	var_x
 	var_y
 
-rotl None
+rotl Some([BV32])
 	var_x
 
-rotl None
+rotl Some([BV64])
 	var_x
-
-rotl None
-	var_x
-	var_y
 
 rotr Some([BV8, BV16])
 	var_x
 	var_y
 
-rotr None
+rotr Some([BV32])
 	var_x
 	var_y
 
-rotr None
+rotr Some([BV64])
 	var_x
 	var_y
 
 rotr Some([BV8, BV16])
 	var_x
 
-rotr None
+rotr Some([BV32])
 	var_x
 
-rotr None
+rotr Some([BV64])
 	var_x
 
-rotr None
-	var_x
-	var_y
-
-clz None
+clz Some([BV8])
 	var_x
 
-clz None
+clz Some([BV16])
 	var_x
 
-clz None
+ctz Some([BV8])
 	var_x
 
-clz None
+ctz Some([BV16])
 	var_x
 
-ctz None
+cls Some([BV8])
 	var_x
 
-ctz None
+cls Some([BV16])
 	var_x
 
-ctz None
+popcnt Some([BV8])
 	var_x
 
-ctz None
+popcnt Some([BV16])
 	var_x
 
-cls None
+popcnt Some([BV32])
 	var_x
 
-cls None
+popcnt Some([BV64])
 	var_x
-
-cls None
-	var_x
-
-cls None
-	var_x
-
-popcnt None
-	var_x
-
-popcnt None
-	var_x
-
-popcnt None
-	var_x
-
-popcnt None
-	var_x
-
-popcnt None
-	var_x
-
-popcnt None
-	var_x
-
-bitselect None
-	var_c
-	var_x
-	var_y
-
-bitselect None
-	var_c
-	var_x
-	var_y
-
-icmp None
-	icmp_zero_cond_not_eq
-		var_cond
-	var_x
-	var_y
-
-icmp None
-	icmp_zero_cond
-		var_cond
-	var_x
-	var_y
-
-icmp None
-	icmp_zero_cond_not_eq
-		var_cond
-	var_x
-	var_y
-
-icmp None
-	icmp_zero_cond
-		var_cond
-	var_x
-	var_y
-
-icmp None
-	var_cond
-	var_x
-	y = 
-		value_type
-			var_in_ty
 
 icmp Some([BV8, BV16, BV32, BV64])
 	var_cond
@@ -730,53 +351,9 @@ icmp Some([BV8, BV16, BV32, BV64])
 				var_ty
 	var_y
 
-and 
-	use_lse
-
-and 
-	use_lse
-
-and 
-	use_lse
-
-and 
-	use_lse
-
-and 
-	use_lse
-
-and 
-	use_lse
-
-and 
-	use_lse
-
-and 
-	use_lse
-
-and 
-	use_lse
-
-and 
-	use_lse
-
-and 
-
-iadd None
-	var_x
-	var_y
-
-isub None
-	var_x
-	var_y
-
-imul None
-	var_x
-	var_y
-
 ========================== Verification configuration =========================
-Number of threads:  8
-Working directory:  /tmp/.tmp3fEJA0
+Number of threads:  16
+Working directory:  /tmp/.tmpU3Vvyi
 Log directory:      .veriisle
 Results to log dir: yes (results.out under .veriisle)
 Excluding ISLE terms with any of the following tags (the default exclude set): vector, atomics, spectre, narrowfloat, amode_const, i128, wasm_category_stack, slow.

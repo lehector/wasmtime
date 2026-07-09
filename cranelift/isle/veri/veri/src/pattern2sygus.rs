@@ -94,9 +94,27 @@ impl Display for Pattern2Sygus {
     }
 }
 
+/**
+ * We require a valid pattern to be propertly typed 
+ * (i.e. all (sub)-instructions) need to have one
+ * at least one type
+*/
+fn is_valid_pattern(p: &Pattern2Sygus) -> bool {
+    match &p.pattern {
+        PatternPart::Insn(_, types) => {
+            match types {
+                None => false,
+                Some(_) => p.args.iter().fold(true, |acc, x| acc && is_valid_pattern(x))
+            }
+        }
+        PatternPart::And => false,
+        _  => true
+    }
+}
+
 fn parse_type(t: &Pattern) -> Option<Vec<InsnType>> {
     match t {
-        Pattern::Term{sym: id, args: args, pos: _} => {
+        Pattern::Term{sym: id, args: _, pos: _} => {
             match id.0.as_str() {
                     "ty_int_ref_scalar_64_extract" => Some(vec!(InsnType::BV64)),
                     "fits_in_8" => Some(vec!(InsnType::BV8)),
@@ -106,6 +124,18 @@ fn parse_type(t: &Pattern) -> Option<Vec<InsnType>> {
                     _ => { log::error!("Unrecognized string type: {}", id.0); None }
             }
         }
+        Pattern::ConstPrim { val, pos: _ } => {
+            match val.0.as_str() {
+                    "I8" => Some(vec!(InsnType::BV8)),
+                    "I16" => Some(vec!(InsnType::BV16)),
+                    "I32" => Some(vec!(InsnType::BV32)),
+                    "I64" => Some(vec!(InsnType::BV64)),
+                    _ => { log::error!("Unrecognized prim type: {}", val.0); None }
+            }
+        }
+        Pattern::And { subpats, pos: _ } => {
+            subpats.first().map_or(None, |x| parse_type(x))
+        }
         Pattern::Wildcard{pos: _} => Some(all_types()),
         _ => { log::error!("Unrecognized type: {:?}", t); None }
     }
@@ -113,7 +143,7 @@ fn parse_type(t: &Pattern) -> Option<Vec<InsnType>> {
 
 fn handle_term(t: &Pattern) -> Option<Pattern2Sygus> {
     match t {
-       Pattern::Term{sym: id, args: args, pos: _} => {
+       Pattern::Term{sym: id, args, pos: _} => {
            match Opcode::from_str(id.0.as_str()) {
                 Ok(opcode) => { 
                    if !opcode_allowed(opcode) { /*print!(" unsopportaed {} :(", opcode);*/ return None; }
@@ -185,14 +215,14 @@ pub fn pattern2sygus(defs: Vec<Def>, tyenv: &TypeEnv, termenv: &TermEnv) {
         match def {
             Def::Rule(rule) => {
                 match rule.pattern {
-                    Pattern::Term{sym: id, args: args, pos: pos} => {
+                    Pattern::Term{sym: id, args, pos} => {
                         if id.0 != "lower" { continue; }
 
                         let inner_term = args[0].clone();
                         let pattern2sygus = handle_term(&inner_term);
 
                         if let Some(pattern2sygus) = pattern2sygus {
-                            println!("{}", pattern2sygus);
+                            if is_valid_pattern(&pattern2sygus) { println!("{}", pattern2sygus); }
                         }
                     }
                     _ => continue
