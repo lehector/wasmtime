@@ -1,359 +1,185 @@
-iadd Some([BV64])
-	var_x
-	var_y
-
-iadd Some([BV64])
-	var_x
-	imm12_from_value
-		var_y
-
-iadd Some([BV64])
-	imm12_from_value
-		var_x
-	var_y
-
-iadd Some([BV64])
-	var_x
-	var_y
-
-iadd Some([BV64])
-	var_x
-	var_y
-
-iadd Some([BV64])
-	var_x
-	extended_value_from_value
-		var_y
-
-iadd Some([BV64])
-	extended_value_from_value
-		var_x
-	var_y
-
-iadd Some([BV64])
-	var_x
-	ishl Some([BV8, BV16, BV32, BV64])
-		var_y
-
-iadd Some([BV64])
-	ishl Some([BV8, BV16, BV32, BV64])
-		var_x
-	var_y
-
-iadd Some([BV64])
-	var_x
-	imul Some([BV8, BV16, BV32, BV64])
-		var_y
-		var_z
-
-iadd Some([BV64])
-	imul Some([BV8, BV16, BV32, BV64])
-		var_x
-		var_y
-	var_z
-
-isub Some([BV64])
-	var_x
-	imul Some([BV8, BV16, BV32, BV64])
-		var_y
-		var_z
-
-i = 
-
-i = 
-
-iabs Some([BV64])
-	var_x
-
-iabs Some([BV8, BV16, BV32])
-	var_x
-
-isub Some([BV64])
-	var_x
-	var_y
-
-isub Some([BV64])
-	var_x
-	imm12_from_value
-		var_y
-
-isub Some([BV64])
-	var_x
-	var_y
-
-isub Some([BV64])
-	var_x
-	extended_value_from_value
-		var_y
-
-isub Some([BV64])
-	var_x
-	ishl Some([BV8, BV16, BV32, BV64])
-		var_y
-
-ineg Some([BV8, BV16, BV32, BV64])
-	var_x
-
-imul Some([BV64])
-	var_x
-	var_y
-
-udiv Some([BV64])
-	var_x
-	var_y
-
-udiv Some([BV8, BV16, BV32])
-	var_x
-	var_y
-
-sdiv Some([BV64])
-	var_x
-	var_y
-
-sdiv Some([BV8, BV16, BV32])
-	var_x
-	var_y
-
-sdiv Some([BV64])
-	var_x
-
-sdiv Some([BV8, BV16, BV32])
-	var_x
-
-urem Some([BV64])
-	var_x
-	var_y
-
-urem Some([BV8, BV16, BV32])
-	var_x
-	var_y
-
-srem Some([BV64])
-	var_x
-	var_y
-
-srem Some([BV8, BV16, BV32])
-	var_x
-	var_y
-
-umin Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-smin Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-umax Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-smax Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-uextend Some([BV8, BV16, BV32, BV64])
-	x = 
-		value_type
-			var_in
-
-uextend Some([BV8, BV16, BV32, BV64])
-
-uextend Some([BV8, BV16, BV32, BV64])
-	x = 
-		and 
-			value_type
-				var_in
-
-uextend Some([BV8, BV16, BV32, BV64])
-	x = 
-
-sextend Some([BV8, BV16, BV32, BV64])
-	x = 
-		value_type
-			var_in
-
-sextend Some([BV8, BV16, BV32, BV64])
-
-sextend Some([BV8, BV16, BV32, BV64])
-	x = 
-
-bnot Some([BV8, BV16, BV32, BV64])
-	var_x
-
-bnot Some([BV8, BV16, BV32, BV64])
-	var_x
-
-bnot Some([BV8, BV16, BV32, BV64])
-	ishl Some([BV8, BV16, BV32, BV64])
-		var_x
-
-bnot Some([BV8, BV16, BV32, BV64])
-	bxor Some([BV8, BV16, BV32, BV64])
-		var_x
-		var_y
-
-band Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-band Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-band Some([BV8, BV16, BV32, BV64])
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-band Some([BV8, BV16, BV32, BV64])
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
-bor Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-bor Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-bor Some([BV8, BV16, BV32, BV64])
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-bor Some([BV8, BV16, BV32, BV64])
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
-bxor Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-bxor Some([BV8, BV16, BV32, BV64])
-	var_x
-	var_y
-
-bxor Some([BV8, BV16, BV32, BV64])
-	var_x
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-
-bxor Some([BV8, BV16, BV32, BV64])
-	bnot Some([BV8, BV16, BV32, BV64])
-		var_y
-	var_x
-
-ishl Some([BV8, BV16, BV32])
-	var_x
-	var_y
-
-ishl Some([BV64])
-	var_x
-	var_y
-
-ushr Some([BV8, BV16, BV32])
-	var_x
-	var_y
-
-ushr Some([BV64])
-	var_x
-	var_y
-
-sshr Some([BV8, BV16, BV32])
-	var_x
-	var_y
-
-sshr Some([BV64])
-	var_x
-	var_y
-
-rotl Some([BV8, BV16])
-	var_x
-	var_y
-
-rotl Some([BV8, BV16])
-	var_x
-
-rotl Some([BV32])
-	var_x
-	var_y
-
-rotl Some([BV64])
-	var_x
-	var_y
-
-rotl Some([BV32])
-	var_x
-
-rotl Some([BV64])
-	var_x
-
-rotr Some([BV8, BV16])
-	var_x
-	var_y
-
-rotr Some([BV32])
-	var_x
-	var_y
-
-rotr Some([BV64])
-	var_x
-	var_y
-
-rotr Some([BV8, BV16])
-	var_x
-
-rotr Some([BV32])
-	var_x
-
-rotr Some([BV64])
-	var_x
-
-clz Some([BV8])
-	var_x
-
-clz Some([BV16])
-	var_x
-
-ctz Some([BV8])
-	var_x
-
-ctz Some([BV16])
-	var_x
-
-cls Some([BV8])
-	var_x
-
-cls Some([BV16])
-	var_x
-
-popcnt Some([BV8])
-	var_x
-
-popcnt Some([BV16])
-	var_x
-
-popcnt Some([BV32])
-	var_x
-
-popcnt Some([BV64])
-	var_x
-
-icmp Some([BV8, BV16, BV32, BV64])
-	var_cond
-	x = 
-		value_type
-			ty_int
-				var_ty
-	var_y
-
+((i64 iadd (i64 value) (i64 value) ))
+((i64 iadd (i64 value) (i64 ((_ zero_extend 52) ((_ extract 11 0) value))) ))
+((i64 iadd (i64 ((_ zero_extend 52) ((_ extract 11 0) value))) (i64 value) ))
+((i64 iadd (i64 value) (i64 value) ))
+((i64 iadd (i64 value) (i64 value) ))
+((i64 iadd (i64 value) (i8 ((_ zero_extend 56) value)) ))
+((i64 iadd (i64 value) (i8 ((_ sign_extend 56) value)) ))
+((i64 iadd (i64 value) (i16 ((_ zero_extend 48) value)) ))
+((i64 iadd (i64 value) (i16 ((_ sign_extend 48) value)) ))
+((i64 iadd (i64 value) (i32 ((_ zero_extend 32) value)) ))
+((i64 iadd (i64 value) (i32 ((_ sign_extend 32) value)) ))
+((i64 iadd (i8 ((_ zero_extend 56) value)) (i64 value) ))
+((i64 iadd (i8 ((_ sign_extend 56) value)) (i64 value) ))
+((i64 iadd (i16 ((_ zero_extend 48) value)) (i64 value) ))
+((i64 iadd (i16 ((_ sign_extend 48) value)) (i64 value) ))
+((i64 iadd (i32 ((_ zero_extend 32) value)) (i64 value) ))
+((i64 iadd (i32 ((_ sign_extend 32) value)) (i64 value) ))
+((i64 iadd (i64 value) (i64 ishl (i64 value) (i64 value) ) ))
+((i64 iadd (i64 ishl (i64 value) (i64 value) ) (i64 value) ))
+((i64 iadd (i64 value) (i64 imul (i64 value) (i64 value) ) ))
+((i64 iadd (i64 imul (i64 value) (i64 value) ) (i64 value) ))
+((i64 isub (i64 value) (i64 imul (i64 value) (i64 value) ) ))
+((i64 iabs (i64 value) ))
+((i8 iabs (i8 value) ))
+((i16 iabs (i16 value) ))
+((i32 iabs (i32 value) ))
+((i64 isub (i64 value) (i64 value) ))
+((i64 isub (i64 value) (i64 ((_ zero_extend 52) ((_ extract 11 0) value))) ))
+((i64 isub (i64 value) (i64 value) ))
+((i64 isub (i64 value) (i8 ((_ zero_extend 56) value)) ))
+((i64 isub (i64 value) (i8 ((_ sign_extend 56) value)) ))
+((i64 isub (i64 value) (i16 ((_ zero_extend 48) value)) ))
+((i64 isub (i64 value) (i16 ((_ sign_extend 48) value)) ))
+((i64 isub (i64 value) (i32 ((_ zero_extend 32) value)) ))
+((i64 isub (i64 value) (i32 ((_ sign_extend 32) value)) ))
+((i64 isub (i64 value) (i64 ishl (i64 value) (i64 value) ) ))
+((i8 ineg (i8 value) ))
+((i16 ineg (i16 value) ))
+((i32 ineg (i32 value) ))
+((i64 ineg (i64 value) ))
+((i64 imul (i64 value) (i64 value) ))
+((i64 udiv (i64 value) (i64 value) ))
+((i8 udiv (i8 value) (i8 value) ))
+((i16 udiv (i16 value) (i16 value) ))
+((i32 udiv (i32 value) (i32 value) ))
+((i64 sdiv (i64 value) (i64 value) ))
+((i8 sdiv (i8 value) (i8 value) ))
+((i16 sdiv (i16 value) (i16 value) ))
+((i32 sdiv (i32 value) (i32 value) ))
+((i64 sdiv (i64 value) ))
+((i8 sdiv (i8 value) ))
+((i16 sdiv (i16 value) ))
+((i32 sdiv (i32 value) ))
+((i64 urem (i64 value) (i64 value) ))
+((i8 urem (i8 value) (i8 value) ))
+((i16 urem (i16 value) (i16 value) ))
+((i32 urem (i32 value) (i32 value) ))
+((i64 srem (i64 value) (i64 value) ))
+((i8 srem (i8 value) (i8 value) ))
+((i16 srem (i16 value) (i16 value) ))
+((i32 srem (i32 value) (i32 value) ))
+((i8 umin (i8 value) (i8 value) ))
+((i16 umin (i16 value) (i16 value) ))
+((i32 umin (i32 value) (i32 value) ))
+((i64 umin (i64 value) (i64 value) ))
+((i8 smin (i8 value) (i8 value) ))
+((i16 smin (i16 value) (i16 value) ))
+((i32 smin (i32 value) (i32 value) ))
+((i64 smin (i64 value) (i64 value) ))
+((i8 umax (i8 value) (i8 value) ))
+((i16 umax (i16 value) (i16 value) ))
+((i32 umax (i32 value) (i32 value) ))
+((i64 umax (i64 value) (i64 value) ))
+((i8 smax (i8 value) (i8 value) ))
+((i16 smax (i16 value) (i16 value) ))
+((i32 smax (i32 value) (i32 value) ))
+((i64 smax (i64 value) (i64 value) ))
+((i8 bnot (i8 value) ))
+((i16 bnot (i16 value) ))
+((i32 bnot (i32 value) ))
+((i64 bnot (i64 value) ))
+((i8 bnot (i8 value) ))
+((i16 bnot (i16 value) ))
+((i32 bnot (i32 value) ))
+((i64 bnot (i64 value) ))
+((i8 bnot (i8 ishl (i8 value) (i8 value) ) ))
+((i16 bnot (i16 ishl (i16 value) (i16 value) ) ))
+((i32 bnot (i32 ishl (i32 value) (i32 value) ) ))
+((i64 bnot (i64 ishl (i64 value) (i64 value) ) ))
+((i8 bnot (i8 bxor (i8 value) (i8 value) ) ))
+((i16 bnot (i16 bxor (i16 value) (i16 value) ) ))
+((i32 bnot (i32 bxor (i32 value) (i32 value) ) ))
+((i64 bnot (i64 bxor (i64 value) (i64 value) ) ))
+((i8 band (i8 value) (i8 value) ))
+((i16 band (i16 value) (i16 value) ))
+((i32 band (i32 value) (i32 value) ))
+((i64 band (i64 value) (i64 value) ))
+((i8 band (i8 value) (i8 value) ))
+((i16 band (i16 value) (i16 value) ))
+((i32 band (i32 value) (i32 value) ))
+((i64 band (i64 value) (i64 value) ))
+((i8 band (i8 value) (i8 bnot (i8 value) ) ))
+((i16 band (i16 value) (i16 bnot (i16 value) ) ))
+((i32 band (i32 value) (i32 bnot (i32 value) ) ))
+((i64 band (i64 value) (i64 bnot (i64 value) ) ))
+((i8 band (i8 bnot (i8 value) ) (i8 value) ))
+((i16 band (i16 bnot (i16 value) ) (i16 value) ))
+((i32 band (i32 bnot (i32 value) ) (i32 value) ))
+((i64 band (i64 bnot (i64 value) ) (i64 value) ))
+((i8 bor (i8 value) (i8 value) ))
+((i16 bor (i16 value) (i16 value) ))
+((i32 bor (i32 value) (i32 value) ))
+((i64 bor (i64 value) (i64 value) ))
+((i8 bor (i8 value) (i8 value) ))
+((i16 bor (i16 value) (i16 value) ))
+((i32 bor (i32 value) (i32 value) ))
+((i64 bor (i64 value) (i64 value) ))
+((i8 bor (i8 value) (i8 bnot (i8 value) ) ))
+((i16 bor (i16 value) (i16 bnot (i16 value) ) ))
+((i32 bor (i32 value) (i32 bnot (i32 value) ) ))
+((i64 bor (i64 value) (i64 bnot (i64 value) ) ))
+((i8 bor (i8 bnot (i8 value) ) (i8 value) ))
+((i16 bor (i16 bnot (i16 value) ) (i16 value) ))
+((i32 bor (i32 bnot (i32 value) ) (i32 value) ))
+((i64 bor (i64 bnot (i64 value) ) (i64 value) ))
+((i8 bxor (i8 value) (i8 value) ))
+((i16 bxor (i16 value) (i16 value) ))
+((i32 bxor (i32 value) (i32 value) ))
+((i64 bxor (i64 value) (i64 value) ))
+((i8 bxor (i8 value) (i8 value) ))
+((i16 bxor (i16 value) (i16 value) ))
+((i32 bxor (i32 value) (i32 value) ))
+((i64 bxor (i64 value) (i64 value) ))
+((i8 bxor (i8 value) (i8 bnot (i8 value) ) ))
+((i16 bxor (i16 value) (i16 bnot (i16 value) ) ))
+((i32 bxor (i32 value) (i32 bnot (i32 value) ) ))
+((i64 bxor (i64 value) (i64 bnot (i64 value) ) ))
+((i8 bxor (i8 bnot (i8 value) ) (i8 value) ))
+((i16 bxor (i16 bnot (i16 value) ) (i16 value) ))
+((i32 bxor (i32 bnot (i32 value) ) (i32 value) ))
+((i64 bxor (i64 bnot (i64 value) ) (i64 value) ))
+((i8 ishl (i8 value) (i8 value) ))
+((i16 ishl (i16 value) (i16 value) ))
+((i32 ishl (i32 value) (i32 value) ))
+((i64 ishl (i64 value) (i64 value) ))
+((i8 ushr (i8 value) (i8 value) ))
+((i16 ushr (i16 value) (i16 value) ))
+((i32 ushr (i32 value) (i32 value) ))
+((i64 ushr (i64 value) (i64 value) ))
+((i8 sshr (i8 value) (i8 value) ))
+((i16 sshr (i16 value) (i16 value) ))
+((i32 sshr (i32 value) (i32 value) ))
+((i64 sshr (i64 value) (i64 value) ))
+((i8 rotl (i8 value) (i8 value) ))
+((i16 rotl (i16 value) (i16 value) ))
+((i8 rotl (i8 value) ))
+((i16 rotl (i16 value) ))
+((i32 rotl (i32 value) (i32 value) ))
+((i64 rotl (i64 value) (i64 value) ))
+((i32 rotl (i32 value) ))
+((i64 rotl (i64 value) ))
+((i8 rotr (i8 value) (i8 value) ))
+((i16 rotr (i16 value) (i16 value) ))
+((i32 rotr (i32 value) (i32 value) ))
+((i64 rotr (i64 value) (i64 value) ))
+((i8 rotr (i8 value) ))
+((i16 rotr (i16 value) ))
+((i32 rotr (i32 value) ))
+((i64 rotr (i64 value) ))
+((i8 clz (i8 value) ))
+((i16 clz (i16 value) ))
+((i8 ctz (i8 value) ))
+((i16 ctz (i16 value) ))
+((i8 cls (i8 value) ))
+((i16 cls (i16 value) ))
+((i8 popcnt (i8 value) ))
+((i16 popcnt (i16 value) ))
+((i32 popcnt (i32 value) ))
+((i64 popcnt (i64 value) ))
 ========================== Verification configuration =========================
 Number of threads:  16
-Working directory:  /tmp/.tmpU3Vvyi
+Working directory:  /tmp/.tmpwmfhj2
 Log directory:      .veriisle
 Results to log dir: yes (results.out under .veriisle)
 Excluding ISLE terms with any of the following tags (the default exclude set): vector, atomics, spectre, narrowfloat, amode_const, i128, wasm_category_stack, slow.
